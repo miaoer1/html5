@@ -1,0 +1,96 @@
+<html>
+<head>
+
+<body>
+<script language="javascript">
+function $(str) 
+{   return document.write(str); 
+} 
+function getnum(a,b,n) 
+{ 
+var i=b; 
+var del = b-a-n+1; 
+var arr = new Array(); 
+for(;i>=a;i--) 
+    arr.push(i); 
+for(;del>0;del--) 
+{ 
+    arr.splice(Math.floor(Math.random()*arr.length), 1); 
+} 
+return arr; 
+} 
+ 
+function show(a) 
+{ 
+    for(var i=0;i<a.length;i++) 
+    {   $(a[i]+" ");} 
+    $("</br>"); 
+} 
+
+
+document.write("<h1 style=color:#FF0000></h1>");
+
+
+
+
+document.write("<h1 style=color:#FF0000>大乐透  Javascript 随机控</h1>");
+document.write("<h1 style=color:#FF0000>大乐透随机控位版_前区</><br><hr>");
+var arr = getnum(1,35,(Math.floor(Math.random()*10+5))); 
+show(arr); 
+
+ 
+function descent(a,b) 
+{ 
+    return b-a; 
+} 
+function getnum2(a,b,n)/*采用直接选取的方法，将选过的删掉，在新的数组中存放选出的数。*/ 
+{ 
+    var arr = new Array(); 
+    var i=a; 
+    var arr2 = new Array(); 
+    for(;i<=b;i++) 
+    {   arr.push(i);} 
+    show(arr); 
+    for(;n>0;n--) 
+    {   arr2.push(arr.splice(Math.floor(Math.random()*arr.length),1));} 
+    arr2.sort(descent);/*对于数字sort，需要写一个函数*/ 
+    return arr2; 
+} 
+document.write("<h1  style=color:#0000cc>大乐透随机控位版_后区</><br><hr>");
+document.write(Math.floor(Math.random()*12+1)); 
+document.write("<h1  style=color:#0000cc>大乐透随机控位版_后区</><br><hr>");
+document.write(Math.floor(Math.random()*12+1)); 
+</script>
+<br><hr>
+<a href="buy大乐透js跨平台随机控位版.html" style="font-size:35px;">开始选号</a>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
